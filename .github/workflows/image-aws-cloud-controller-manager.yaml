@@ -14,8 +14,8 @@ on:
       - 'release-*'
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
-    paths:
-      - /**
+    #paths:
+      #- /**
   pull_request:
     branches:
   workflow_dispatch: {}
