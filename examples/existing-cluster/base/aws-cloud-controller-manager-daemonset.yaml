@@ -28,7 +28,7 @@ spec:
       serviceAccountName: cloud-controller-manager
       containers:
         - name: aws-cloud-controller-manager
-          image: ghcr.io/dhaines/aws-cloud-controller-manager:v1.34.1
+          image: ghcr.io/dhaines/aws-cloud-controller-manager:v1.34.1000
           args:
             - --v=2
             - --cloud-provider=aws
