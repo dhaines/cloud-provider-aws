@@ -78,9 +78,10 @@ func execDescribeInstanceBatch(ec2api iface.EC2) batcher.BatchExecutor[ec2.Descr
 	return func(ctx context.Context, inputs []*ec2.DescribeInstancesInput) []batcher.Result[ec2types.Instance] {
 		results := make([]batcher.Result[ec2types.Instance], len(inputs))
 
-		firstInput := *inputs[0]
+		//firstInput := *inputs[0]
+		var firstInput ec2.DescribeInstancesInput
 		// aggregate instanceIDs into 1 input
-		for _, input := range inputs[1:] {
+		for _, input := range inputs {
 			firstInput.InstanceIds = append(firstInput.InstanceIds, input.InstanceIds...)
 		}
 		batchedInput := &ec2.DescribeInstancesInput{

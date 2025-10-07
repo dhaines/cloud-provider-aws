@@ -11,7 +11,7 @@ permissions:
   contents: read
 jobs:
   update-deps:
-    if: ${{ github.repository == 'kubernetes/cloud-provider-aws' }}
+    if: ${{ github.repository == 'dhaines/cloud-provider-aws' }}
     runs-on: ubuntu-20.04
     permissions:
       contents: write
